@@ -1,0 +1,62 @@
+    <h2>Task A:</h2>
+    <h4>Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi so'zda qatnashgan sonini return qilishi kerak bo'ladi.</h4>
+    <div class="jumbotron p-3 shadow-sm">
+        <form id="form1" method="post">
+            <div class="d-flex align-items-center">
+                <input 
+                type="text"
+                autofocus
+                autocomplete="off" 
+                class="form-control mr-3" 
+                placeholder="So'z kiriting"
+                id="word" 
+                name="word" 
+                required />
+
+                <input 
+                type="text"
+                class="form-control mr-3" 
+                placeholder="Harfni kiriting"
+                id="letter" 
+                name="letter" 
+                required />
+                <button class="btn btn-primary" style="border-radius: 20px; width: 30%;" type="submit">So'zni kiritish</button>
+</div>
+</form>
+</div>
+<ol class="list"></ol>
+<script>
+const form = document.querySelector("#form1");
+const word = document.querySelector("#word");
+const letter = document.querySelector("#letter");
+const list = document.querySelector(".list");
+
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const newWord = word.value;
+  const newLetter = letter.value;
+  countLetter(newWord, newLetter);
+  word.value = "";
+  letter.value = "";
+  word.focus();
+});
+
+
+function deleteWord(ele) {
+  console.log(ele.parentElement);
+  ele.parentElement.remove();
+}
+
+function countLetter(word, letter) {
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === letter) {
+      count++;
+    }
+  }
+  const newHTML = `<li style="margin:10px">${word}da ${letter} harfi ${count} ta  <button onclick="deleteWord(this)">o'chirish</button></li>`;
+  list.insertAdjacentHTML('beforeend', newHTML);
+}
+
+</script>
