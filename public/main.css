@@ -110,12 +110,52 @@ flex-direction: column;
 .main_frame .right_frame {
 position: relative;
 width: 108px;
-height: 100%;
+height: 1315px;
 background-color: white;
 align-items: center;
 display: flex;
 flex-direction: column;
 }
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  align-content: center;
+}
+.nav-item {
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+  background-color:#f0f0f6;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.nav-item img, .nav-item svg {
+  width: 20px;
+  padding: 15px;
+  text-align: center;
+}
+.nav-item.active{
+  background-color: #ffb400;
+}
+.nav-item.active img, .nav-item.active svg {
+  padding: 10px;
+  width: 30px;
+  padding: 10px;
+}
+
+.nav-item:hover{
+  background-color: #ffb400;
+  transition: background-color 0.3s ease;
+}
+.nav-item img:hover, .nav-item svg:hover {
+  width: 30px;
+  padding: 10px;
+}
+
 
 .main_frame .left_1 {
 position: relative;
