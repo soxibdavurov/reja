@@ -1,1 +1,259 @@
-<div>Hello, your'e author</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+<div class="frame">
+    <div class="main_frame">
+        <div class="left_frame">
+            <div class="left_1">
+                <div class="left_1-1">
+                
+                    <img src="/author/images/Profile.png" 
+                    width="156px" height="142px"
+                    alt="Author Image" class="author_image" />
+                </div>
+                <div class="left_1-2"><%=user.name%></div>
+                <div class="left_1-3"><%=user.profession%></div>
+                <div class="left-icons">
+                    <a class="link_href" href="">
+                        <div class="icon">
+                        <img src="/author/icons/Instagram.svg" class="icon-1" />
+                        </div>
+                    </a>
+                    
+                    <a class="link_href" href="">
+                        <div class="icon">
+                        <img src="/author/icons/Twitter.svg" class="icon-1"/>
+                        </div>
+                    </a>
+
+                    <a class="link_href" href="">
+                        <div class="icon">
+                          <img src="/author/icons/Facebook.svg" class="icon-1" />
+                        </div>
+                    </a>
+
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="/author/icons/Youtube.svg" class="icon-1" />
+                        </div>
+                    </a>
+                    
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="/author/icons/Dribbble.svg" class="icon-1" />
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="/author/icons/Linkeding.svg" class="icon-1" />
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="marginer"></div>
+
+            <div class="left_2">
+                <div class="info-row">
+      <div class="label">Age:</div>
+      <div class="value"><%=user.age%></div>
+    </div>
+    <div class="info-row">
+      <div class="label">Residence:</div>
+      <div class="value"><%=user.residence%></div>
+    </div>
+    <div class="info-row">
+      <div class="label">Freelance:</div>
+      <div class="value available">Available</div>
+    </div>
+    <div class="info-row">
+      <div class="label">Address:</div>
+      <div class="value"><%=user.address%></div>
+    </div>
+            </div>
+            <div class="marginer"></div>
+
+
+            <div class="left_3"><h3>Languages</h3>
+                <div class="qator">
+    <div class="qator-label">
+      <span><%=user.languages[0]%></span>
+      <span>100%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 100%;"></div>
+    </div>
+  </div>
+
+  <div class="qator">
+    <div class="qator-label">
+      <span><%=user.languages[1]%></span>
+      <span>80%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"></div>
+    </div>
+  </div>
+
+  <div class="qator">
+    <div class="qator-label">
+      <span><%=user.languages[2]%></span>
+      <span>80%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"></div>
+    </div>
+            </div>
+
+    </div> <br><br>
+            <div class="marginer"></div>
+
+            <div class="left_4">
+                <h3>Skills</h3>
+
+                <div class="qator">
+                    <div class="qator-label">
+                        <span><%=user.skills[2]%></span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div> 
+
+                <div class="qator">
+                    <div class="qator-label">
+                        <span><%=user.skills[1]%></span>
+                        <span>100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="qator">
+                    <div class="qator-label">
+                        <span><%=user.skills[0]%></span>
+                        <span>100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                
+                <div class="qator">
+                    <div class="qator-label">
+                        <span><%=user.skills[3]%></span>
+                        <span>96%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 96%;"></div>
+                    </div>
+                </div>
+
+                <div class="qator">
+                    <div class="qator-label">
+                        <span><%=user.skills[4]%></span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                
+            </div> <br><br>
+            <div class="marginer"></div>
+
+            <div class="left_5">
+                <h3>Extra Skills</h3>
+                <div class="ex-qator">
+                    <span><img src="/author/icons/squares.svg" /><%=user.extra_skills[0]%></span>
+                    <span><img src="/author/icons/squares.svg" /><%=user.extra_skills[1]%></span>
+                    <span><img src="/author/icons/squares.svg" /><%=user.extra_skills[2]%></span>
+                    <span><img src="/author/icons/squares.svg" /><%=user.extra_skills[3]%></span>
+                </div>
+                
+            </div>
+            <div class="marginer"></div>
+        </div>
+
+        <!-- Middle Frame -->
+        <div class="mid_frame">
+            <section class="center-section">
+                <div class="center-section__info">
+                    <h1 class="center-section__welcome"><%=user.profession%> in <%=user.work_place%> </h1>
+                    <p class="about-me__description">
+                        <%=user.about_me%>
+                    </p>
+                    <button class="hire-me">HIRE ME →</button>
+                </div>
+
+                <div class="center-section__img">
+                    <img src="/author/images/person.png" alt="Main image">
+                </div>
+
+            </section>
+
+            <section class="my-services">
+<h2>My services</h2>
+<p class="about-me__description" style="margin:0 150px 50px 150px; text-align: center;">
+    <%=user.service_desc2%>
+</p>
+
+<div class="flex-container">
+<div class="flex-item">
+    <img src="/author/icons/serv1.svg">
+    <h4>Web development</h4>
+    <p class="about-me__description">Blog, E-Commerce</p>
+</div>
+<div class="flex-item">
+    <img src="/author/icons/serv2.svg">
+    <h4>UI/UX Design</h4>
+    <p class="about-me__description">Mobile App, Website Design</p>
+</div>
+<div class="flex-item">
+    <img src="/author/icons/serv3.svg">
+    <h4>Sound Design</h4>
+    <p class="about-me__description">Voice Over, Beat Making</p>
+</div>
+</div>
+<div class="flex-container">
+<div class="flex-item">
+    <img src="/author/icons/serv4.svg">
+    <h4>Web development</h4>
+    <p class="about-me__description">Blog, E-Commerce</p>
+</div>
+<div class="flex-item">
+    <img src="/author/icons/serv5.svg">
+    <h4>Web development</h4>
+    <p class="about-me__description">Blog, E-Commerce</p>
+</div>
+<div class="flex-item">
+    <h4>Advertising</h4>
+    <p class="about-me__description" style="margin:10px"><%=user.service_desc%></p>
+</div>
+</div>
+            </section>
+
+            
+
+
+        </div>
+        <div class="right_frame"></div>
+    </div>
+</div>
+</body>
+
+</html>
