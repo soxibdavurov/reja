@@ -1,18 +1,6 @@
-// console.log("TRAIN AREA");
-
-// // A task
-// let word = "hello";
-// let letter = "l";
-// let a = 0;
-// for (let i = 0; i < word.length; i++) {
-//     if (word[i] === letter) {
-//         a++;
-//     }
-// }
-// console.log(`${letter} harfi ${word} so'zida ${a} marta qatnashgan.`);
 
 
-console.log("Web Serverni boshlash"); 
+console.log("Web Server boshlandi"); 
 const express = require("express"); 
 const app = express(); 
 const http = require("http");
