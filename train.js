@@ -1,25 +1,37 @@
 console.log("TRAINING STARTED");
-const prompt = require("prompt-sync")();
 
 
 /*                  TASK A              */
 
-let word = "mexanizatsiyalshtirilgandanmisizlar"; //Sanash kerak bo'lgan so'z
-let letter = "a";
+// let word = "mexanizatsiyalshtirilgandanmisizlar"; //Sanash kerak bo'lgan so'z
+// let letter = "a";
 
-function countLetter(word, letter) {
-  let count = 0;
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
-      count++;
-    }
-  }
- console.log(`${word}da ${letter} harfi ${count} ta`);
-}
-countLetter(word, letter);
+// function countLetter(word, letter) {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+//  console.log(`${word}da ${letter} harfi ${count} ta`);
+// }
+
+// countLetter(word, letter);
 // countLetter(word, "m");
-// countLetter("Sokhibjon", "o");
+// countLetter("Sokhibjon", " o");
+// countLetter("James", "e");
 
+
+// function countLetter2(text, letter) {
+//   let count = 0;
+//   for (let i of text) {
+//     if (i === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countLetter2("mexanizatsiyalshtirilgandanmisizlar", "a"));
 
 /*                  Lesson 21                   */
 
@@ -31,6 +43,7 @@ const advice = [
     "Yoshlarga investitsiya qiling", // 50-60
     "Endi dam oling", // 60+
 ];
+
 
 
 function maslahatBering(age, callback) {

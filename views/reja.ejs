@@ -24,35 +24,16 @@ crossorigin="anonymous">
                 id="create-field" 
                 name="item" 
                 required />
-                <button class="btn btn-primary" style="border-radius: 20px; width: 30%;" type="submit">Yangi xarid</button>
+                <button class="btn btn-primary" style="border-radius: 20px; width: 30%;" type="submit">Yangi reja qo'shish</button>
 </div>
 </form>
 </div>
+
+<button id="clean-all" class="btn btn-danger" style="border-radius: 20px;">Barchasini tozalash</button>
 <ol class="list"></ol>
-<script>
-    const form = document.querySelector("#create-form");
-const input = document.querySelector("#create-field");
-const list = document.querySelector(".list");
 
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const newItem = input.value;
-  createPurchase(newItem);
-  input.value = "";
-  input.focus();
-});
 
-function createPurchase(item) {
-  const newHTML = `<li style="margin:10px">${item}  <button onclick="deletePurchase(this)">delete</button></li>`;
-  list.insertAdjacentHTML('beforeend', newHTML);
-}
-
-function deletePurchase(ele) {
-  console.log(ele.parentElement);
-  ele.parentElement.remove();
-}
-</script>
 </div>
 </body>
 
