@@ -1,5 +1,20 @@
 console.log("TRAINING STARTED");
 
+/*                  TASK B                   */
+
+let mixWord = "skdfjlsdjf3847289361fdslkhfk2A223454";
+
+function countLetters(mixWord) {
+  let count = 0; 
+  for (let i = 0; i < mixWord.length; i++) {
+    if (mixWord[i] >= '0' && mixWord[i] <= '9') {
+      count++;
+    }
+  }
+  console.log(`Berilgan so'zda raqamlar soni: ${count}`);
+}
+
+countLetters(mixWord);
 
 /*                  TASK A              */
 
@@ -33,7 +48,7 @@ console.log("TRAINING STARTED");
 // }
 // console.log(countLetter2("mexanizatsiyalshtirilgandanmisizlar", "a"));
 
-/*                  Lesson 21                   */
+/*                  Lesson 21                  
 
 const advice = [
     "Yaxshi talaba bo'ling", // 0-20
@@ -44,6 +59,7 @@ const advice = [
     "Endi dam oling", // 60+
 ];
 
+ 
 
 
 function maslahatBering(age, callback) {
@@ -72,8 +88,9 @@ maslahatBering(25, (error, result) => {
   }
 });
 
+*/
 
-/*                  Lesson 22                   */
+/*                  Lesson 22                 
 
 const advice2 = [
     "Yaxshi talaba bo'ling", // 0-20
@@ -86,36 +103,36 @@ const advice2 = [
 
 
 
-// function maslahatBering(age, callback) {
-//   if (isNaN(age)) {
-//     callback('Iltimos, yoshni raqam sifatida kiriting', null);
-//   } else if (age <= 20) {
-//     callback(null, advice2[0]);
-//   } else if (age <= 30) {2
-//     callback(null, advice2[1]);
-//   } else if (age <= 40) {2
-//     callback(null, advice2[2]);
-//   } else if (age <= 50) {2
-//     callback(null, advice2[3]);
-//   } else if (age <= 60) {2
-//     callback(null, advice2[4]);
-//   } else {
-//     setInterval(function() {
-//       callback(null, advice2[5]);
-//     }, 1000); // 2 soniya kutish
-//   }
-// }
+function maslahatBering(age, callback) {
+  if (isNaN(age)) {
+    callback('Iltimos, yoshni raqam sifatida kiriting', null);
+  } else if (age <= 20) {
+    callback(null, advice2[0]);
+  } else if (age <= 30) {2
+    callback(null, advice2[1]);
+  } else if (age <= 40) {2
+    callback(null, advice2[2]);
+  } else if (age <= 50) {2
+    callback(null, advice2[3]);
+  } else if (age <= 60) {2
+    callback(null, advice2[4]);
+  } else {
+    setInterval(function() {
+      callback(null, advice2[5]);
+    }, 1000); // 2 soniya kutish
+  }
+}
 
 
-// console.log("passed here 0");
-// maslahatBering(70, (err, data) => {
-//   if (err) {
-//     console.log("Xatolik:", err);
-//   } else {
-//     console.log(data);
-//   }
-// });
-// console.log("passed here 1");/
+console.log("passed here 0");
+maslahatBering(70, (err, data) => {
+  if (err) {
+    console.log("Xatolik:", err);
+  } else {
+    console.log(data);
+  }
+});
+console.log("passed here 1");/
 
 
 
@@ -163,3 +180,5 @@ async function run() {
 }
 
 run();
+
+  */
