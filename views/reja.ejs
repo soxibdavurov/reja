@@ -14,15 +14,16 @@ crossorigin="anonymous">
     <h1 class="display-4 text-center py-1">Reja va maqsadlar</h1>
 
     <div class="jumbotron p-3 shadow-sm">
-        <form id="create-item" action="/create-item" method="post">
+        <form id="create-form" action="/create-item" method="POST">
             <div class="d-flex align-items-center">
                 <input 
-                type="text"
+                id="create-field"
+                name="reja"  
                 autofocus
                 autocomplete="off" 
                 class="form-control mr-3" 
-                id="create-field" 
-                name="reja" 
+                type="text"
+                style="flex:1"
                 required />
                 <button class="btn btn-primary" style="border-radius: 20px; width: 30%;" type="submit">Yangi reja qo'shish</button>
 </div>
@@ -41,11 +42,14 @@ crossorigin="anonymous">
         </li>
     <% }) %> 
 
-<button id="clean-all" class="btn btn-danger">Barchasini tozalash</button>
+</ul>
 
-
+<button id="clean-all" class="btn btn-danger" style="border-radius: 20px;">Barchasini tozalash</button>
 
 </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/browser.js"></script>
 </body>
 
 </html>
