@@ -1,20 +1,62 @@
 console.log("TRAINING STARTED");
+const moment = require('moment');
+const time = moment().format('HH:mm');;
+
+/*                  TASK C                   */
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.mahsulotlar = {
+      non: non,
+      lagmon: lagmon,
+      cola: cola
+    };
+  }
+
+  qoldiq() {
+    console.log(`Hozir ${time}. Do'konda ${this.mahsulotlar.non} dona non, ${this.mahsulotlar.lagmon} kosa lag'mon,
+       ${this.mahsulotlar.cola} dona cola bor.`);
+  }
+
+  sotish(mahsulot, miqdor) {
+    if (this.mahsulotlar[mahsulot] >= miqdor) 
+    {
+      this.mahsulotlar[mahsulot] -= miqdor;
+      console.log(`${time} da ${miqdor}ta ${mahsulot} sotildi.`)
+    } else {
+      console.log(`Soat ${time}. Do'konda yetarlicha ${mahsulot} yo'q.`);
+    }
+  }
+
+  qabul(mahsulot, miqdor) {
+        this.mahsulotlar[mahsulot] += miqdor;
+        console.log(`Soat ${time}da do'konga ${miqdor}ta ${mahsulot} qabul qilindi.`);
+      }
+
+
+}
+
+const shop = new Shop(4, 5, 2); 
+shop.qoldiq();
+shop.sotish('non', 3);
+shop.qabul('cola', 4);
+shop.qoldiq();
 
 /*                  TASK B                   */
 
-let mixWord = "skdfjlsdjf3847289361fdslkhfk2A223454";
+// let mixWord = "skdfjlsdjf3847289361fdslkhfk2A223454";
 
-function countLetters(mixWord) {
-  let count = 0; 
-  for (let i = 0; i < mixWord.length; i++) {
-    if (mixWord[i] >= '0' && mixWord[i] <= '9') {
-      count++;
-    }
-  }
-  console.log(`Berilgan so'zda raqamlar soni: ${count}`);
-}
+// function countLetters(mixWord) {
+//   let count = 0; 
+//   for (let i = 0; i < mixWord.length; i++) {
+//     if (mixWord[i] >= '0' && mixWord[i] <= '9') {
+//       count++;
+//     }
+//   }
+//   console.log(`Berilgan so'zda raqamlar soni: ${count}`);
+// }
 
-countLetters(mixWord);
+// countLetters(mixWord);
 
 /*                  TASK A              */
 
