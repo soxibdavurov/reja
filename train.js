@@ -1,20 +1,85 @@
 console.log("TRAINING STARTED");
 
-/*                  TASK B                   */
+/*                  TASK D                   */
 
-let mixWord = "skdfjlsdjf3847289361fdslkhfk2A223454";
+/* Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil 
+harflardan iborat bolsa true aks holda false qaytarsin
 
-function countLetters(mixWord) {
-  let count = 0; 
-  for (let i = 0; i < mixWord.length; i++) {
-    if (mixWord[i] >= '0' && mixWord[i] <= '9') {
-      count++;
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+function checkContent(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+
+  const sortedStr1 = [...str1].sort().join('');
+  const sortedStr2 = [...str2].sort().join('');
+
+  return sortedStr1 === sortedStr2;
+}
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("hello", "world")); // false
+console.log(checkContent("Sohibjon", "nojbihoS")); // true
+
+/*                  TASK C                   */
+
+/* class Shop {
+  constructor(non, lagmon, cola) {
+    this.mahsulotlar = {
+      non: non,
+      lagmon: lagmon,
+      cola: cola
+    };
+  }
+
+  qoldiq() {
+    console.log(`Hozir ${time}. Do'konda ${this.mahsulotlar.non} dona non, ${this.mahsulotlar.lagmon} kosa lag'mon,
+       ${this.mahsulotlar.cola} dona cola bor.`);
+  }
+
+  sotish(mahsulot, miqdor) {
+    if (this.mahsulotlar[mahsulot] >= miqdor) 
+    {
+      this.mahsulotlar[mahsulot] -= miqdor;
+      console.log(`${time} da ${miqdor}ta ${mahsulot} sotildi.`)
+    } else {
+      console.log(`Soat ${time}. Do'konda yetarlicha ${mahsulot} yo'q.`);
     }
   }
-  console.log(`Berilgan so'zda raqamlar soni: ${count}`);
+
+  qabul(mahsulot, miqdor) {
+        this.mahsulotlar[mahsulot] += miqdor;
+        console.log(`Soat ${time}da do'konga ${miqdor}ta ${mahsulot} qabul qilindi.`);
+      }
+
+
 }
 
-countLetters(mixWord);
+const shop = new Shop(4, 5, 2); 
+shop.qoldiq();
+shop.sotish('non', 3);
+shop.qabul('cola', 4);
+shop.qoldiq();
+
+*/ 
+
+
+/*                  TASK B                   */
+
+// let mixWord = "skdfjlsdjf3847289361fdslkhfk2A223454";
+
+// function countLetters(mixWord) {
+//   let count = 0; 
+//   for (let i = 0; i < mixWord.length; i++) {
+//     if (mixWord[i] >= '0' && mixWord[i] <= '9') {
+//       count++;
+//     }
+//   }
+//   console.log(`Berilgan so'zda raqamlar soni: ${count}`);
+// }
+
+// countLetters(mixWord);
 
 /*                  TASK A              */
 
