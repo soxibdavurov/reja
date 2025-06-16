@@ -64,6 +64,19 @@ app.post("/edit-me", (req, res) => {
     );
 });
 
+// Delete all code
+app.post("/delete-all", (req, res) => {
+    console.log('user entered / delete-all');
+    db.collection("plans").deleteMany({}, function (err, data) {
+        if (err) {
+            console.log(err);
+            res.end("Xatolik yuz berdi");
+        } else {
+            res.json({state: "success"});
+        }
+    });
+});
+
 app.get("/", function(req, res) {
     console.log('user entered /');
     db.collection("plans")

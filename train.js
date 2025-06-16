@@ -2,7 +2,9 @@ console.log("TRAINING STARTED");
 const moment = require('moment');
 const time = moment().format('HH:mm');;
 
-/*                  TASK E                   */
+/*                  TASK E:
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"                   */
 
 /* Version 1 */
 

@@ -62,5 +62,18 @@ document.addEventListener("click", function (e) {
             });
         }
     }
+    // Delete all operation
+    if(e.target.classList.contains("delete-all")) {
+        if(confirm("Barcha rejalarni o'chirmoqchimisiz?")) {
+            axios
+            .post("/delete-all")
+            .then((response) => {
+                document.getElementById("item-list").innerHTML = "";
+            })
+            .catch(() => {
+                console.log("Xatolik yuz berdi");
+            });
+        }
+    }
 
 })
