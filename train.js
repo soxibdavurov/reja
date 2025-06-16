@@ -2,6 +2,25 @@ console.log("TRAINING STARTED");
 const moment = require('moment');
 const time = moment().format('HH:mm');;
 
+/*                  TASK E                   */
+
+/* Version 1 */
+
+getReverse = (str) => {
+  let teskari = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    teskari += str[i];
+  }
+  console.log(teskari);
+}
+
+/* Version 2 */
+getReverse2 = (str) => {
+console.log( str.split('').reverse().join(''));
+}
+
+getReverse('Sokhibjon'); 
+getReverse2('Justin'); 
 
 /*                  TASK D                   */
 
@@ -9,7 +28,7 @@ const time = moment().format('HH:mm');;
 harflardan iborat bolsa true aks holda false qaytarsin
 
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
-*/
+
 
 function checkContent(str1, str2) {
   if (str1.length !== str2.length) {
@@ -24,6 +43,8 @@ function checkContent(str1, str2) {
 console.log(checkContent("mitgroup", "gmtiprou")); // true
 console.log(checkContent("hello", "world")); // false
 console.log(checkContent("Sohibjon", "nojbihoS")); // true
+
+*/
 
 /*                  TASK C                   */
 
