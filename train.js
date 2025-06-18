@@ -2,27 +2,52 @@ console.log("TRAINING STARTED");
 const moment = require('moment');
 const time = moment().format('HH:mm');;
 
+/*                  TASK F:
+Yagona string argumentga ega findDoublers nomli function tuzing
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+true yokida false natija qaytarsin.
+
+MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+*/
+
+findDoublers = (str) => {
+  const letterCount = {};
+  
+  for (let char of str) {
+    if (letterCount[char]) {
+      return true; 
+    }
+    letterCount[char] = 1; 
+  }
+  
+  return false; 
+}
+
+console.log(findDoublers("qwertyuiopasd"));
+console.log(findDoublers("hello"));
+
 /*                  TASK E:
 Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 MASALAN: getReverse("hello") return qilsin "olleh"                   */
 
 /* Version 1 */
 
-getReverse = (str) => {
-  let teskari = '';
-  for (let i = str.length - 1; i >= 0; i--) {
-    teskari += str[i];
-  }
-  console.log(teskari);
-}
+// getReverse = (str) => {
+//   let teskari = '';
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     teskari += str[i];
+//   }
+//   console.log(teskari);
+// }
 
-/* Version 2 */
-getReverse2 = (str) => {
-console.log( str.split('').reverse().join(''));
-}
+// /* Version 2 */
+// getReverse2 = (str) => {
+// console.log( str.split('').reverse().join(''));
+// }
 
-getReverse('Sokhibjon'); 
-getReverse2('Justin'); 
+// getReverse('Sokhibjon'); 
+// getReverse2('Justin'); 
+
 
 /*                  TASK D                   */
 
