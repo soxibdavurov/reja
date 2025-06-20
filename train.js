@@ -1,6 +1,32 @@
 console.log("TRAINING STARTED");
 const moment = require('moment');
-const time = moment().format('HH:mm');;
+const time = moment().format('HH:mm');
+
+/*                  TASK G:
+Yagona parametrga ega function tuzing.
+Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+
+MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
+Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
+*/
+arr = [21,44,55,43,2];
+
+getHighestIndex = (arr) => {
+  let engKatta = arr[0];
+  let index = 0;
+    for(ele of arr) {
+      if(arr[ele]>engKatta) {
+        engKatta = arr[ele];
+        index = ele;
+      }
+    }
+    return index;
+}
+
+console.log(getHighestIndex(arr));
+
 
 /*                  TASK F:
 Yagona string argumentga ega findDoublers nomli function tuzing
@@ -10,21 +36,21 @@ true yokida false natija qaytarsin.
 MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
 */
 
-findDoublers = (str) => {
-  const letterCount = {};
+// findDoublers = (str) => {
+//   const letterCount = {};
   
-  for (let char of str) {
-    if (letterCount[char]) {
-      return true; 
-    }
-    letterCount[char] = 1; 
-  }
+//   for (let char of str) {
+//     if (letterCount[char]) {
+//       return true; 
+//     }
+//     letterCount[char] = 1; 
+//   }
   
-  return false; 
-}
+//   return false; 
+// }
 
-console.log(findDoublers("qwertyuiopasd"));
-console.log(findDoublers("hello"));
+// console.log(findDoublers("qwertyuiopasd"));
+// console.log(findDoublers("hello"));
 
 /*                  TASK E:
 Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
